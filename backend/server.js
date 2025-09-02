@@ -11,3 +11,8 @@ app.use(express.json());
 //habilita o cor 
 app.use(cors());
 
+//Rotas 
+app.get("/carros", (req, res) => res.json(carros));
+app.get("/lojas", (req, res) => res.json(lojas));
+app.get("/sobre", (req, res) => res.json(sobre));
+app.get("/contato", (req, res) => res.json(contato));
