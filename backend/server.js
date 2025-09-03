@@ -12,7 +12,12 @@ app.use(express.json());
 app.use(cors());
 
 //Rotas 
-app.get("/carros", (req, res) => res.json(carros));
-app.get("/lojas", (req, res) => res.json(lojas));
-app.get("/sobre", (req, res) => res.json(sobre));
-app.get("/contato", (req, res) => res.json(contato));
+app.get("/carros", (req, res) => res.json({ msg: "Rota carros funcionando!" }));
+app.get("/lojas", (req, res) => res.json({ msg: "Rota lojas funcionando!" }));
+app.get("/sobre", (req, res) => res.json({ msg: "Rota sobre funcionando!" }));
+app.get("/contato", (req, res) => res.json({ msg: "Rota contato funcionando!" }));
+
+
+app.listen(port, () => {
+  console.log(`Servidor rodando na porta ${port}`);
+});
