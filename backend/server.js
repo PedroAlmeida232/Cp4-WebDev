@@ -5,17 +5,41 @@ const cors = require("cors");
 const app = express();
 // Porta do servidor
 const port =5001;
-
 app.use(express.json());
-
 //habilita o cor 
 app.use(cors());
 
+
 //Rotas 
-app.get("/carros", (req, res) => res.json({ msg: "Rota carros funcionando!" }));
-app.get("/lojas", (req, res) => res.json({ msg: "Rota lojas funcionando!" }));
-app.get("/sobre", (req, res) => res.json({ msg: "Rota sobre funcionando!" }));
-app.get("/contato", (req, res) => res.json({ msg: "Rota contato funcionando!" }));
+app.get("/login", (req, res) => {
+  
+  res.send("bem-vindo usuario")
+
+});
+
+app.get("/carros", (req, res) => {
+
+  res.send("Rota carros funcionando!")
+
+});
+
+app.get("/menu", (req, res) => {
+
+  res.send("Menu de Opções")
+
+});
+
+app.get("/sistema", (req, res) => {
+
+  res.send("O sistema está ativo")
+
+});
+
+app.get("/contato", (req, res) => {
+
+  res.send("entre em contato conosco")
+
+});
 
 
 app.listen(port, () => {
