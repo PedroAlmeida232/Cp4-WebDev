@@ -44,10 +44,10 @@ function Header() {
             <a onClick={() => busca("/carros")}>Carros</a>
           </li>
           <li>
-            <a onClick={() => busca("/menu")}>Menu</a>
+            <a onClick={() => busca("/loja")}>Loja</a>
           </li>
           <li>
-            <a onClick={() => busca("/sistema")}>Sistema</a>
+            <a onClick={() => busca("/sobre")}>Sobre</a>
           </li>
           <li>
             <a onClick={() => busca("/contato")}>Contato</a>
