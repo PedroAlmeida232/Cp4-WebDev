@@ -1,6 +1,6 @@
 import { useState } from "react";
 import logo from "../assets/logo.png";
-import "./Header.css";
+import "../styles/Header.css";
 
 function Header() {
   const [mensagem, setMensagem] = useState("Nenhuma Mensagem do Servidor");
@@ -38,16 +38,24 @@ function Header() {
       <nav>
         <ul>
           <li>
-            <a onClick={() => busca("/carros")}>Carros</a>
+            <a onClick={() => busca("/carros")}
+              href="/carros"
+            >Carros</a>
           </li>
           <li>
-            <a onClick={() => busca("/loja")}>Loja</a>
+            <a onClick={() => busca("/loja")}
+              href="/loja"
+            >Loja</a>
           </li>
           <li>
-            <a onClick={() => busca("/sobre")}>Sobre</a>
+            <a onClick={() => busca("/sobre")}
+              href="/sobre"
+            >Sobre</a>
           </li>
           <li>
-            <a onClick={() => busca("/contato")}>Contato</a>
+            <a onClick={() => busca("/contato")}
+              href="/contato"
+            >Contato</a>
           </li>
           <li>
             <div className={`status-indicator ${status}`}></div>
