@@ -1,4 +1,4 @@
-import '../styles/Footer.css'; // Importa o arquivo de estilização
+import '../styles/Footer.css';
 
 function Footer() {
   return (

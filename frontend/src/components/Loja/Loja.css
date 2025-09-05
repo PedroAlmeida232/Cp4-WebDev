@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap');
 
-/* Estilos de container e conteúdo, já definidos em outras páginas */
 .page-container {
     display: flex;
     justify-content: center;
@@ -21,7 +20,6 @@
     border: 1px solid #333;
 }
 
-/* Estilos para o título principal da página */
 .loja-container .content-box h1 {
     font-family: 'Playfair Display', serif;
     font-size: 3rem;
@@ -29,7 +27,6 @@
     margin-bottom: 1rem;
 }
 
-/* Estilos para os parágrafos */
 .loja-container .content-box p {
     font-family: 'Roboto', sans-serif;
     font-size: 1.1rem;
