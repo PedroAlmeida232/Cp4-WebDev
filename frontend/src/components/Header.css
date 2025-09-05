@@ -1,7 +1,6 @@
-/* Importe uma fonte moderna do Google Fonts, como a 'Poppins' */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
-/* Estilos globais para reset e fonte */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -10,11 +9,11 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f0f2f5; /* Fundo claro para contrastar com o header */
-    color: #333; /* Cor de texto principal */
+    background-color: #f0f2f5;
+    color: #333;
 }
 
-/* Estilos para o componente Header */
+
 header {
     display: flex;
     justify-content: space-between;
@@ -22,30 +21,29 @@ header {
     padding: 1.5rem 3rem;
     background-color: #ffffff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-bottom: 3px solid #007bff; /* Linha de destaque na cor principal */
+    border-bottom: 3px solid #007bff;
 }
 
-/* Estilos para a logo */
+
 header > div {
     display: flex;
     align-items: center;
 }
 
 header img {
-    height: 50px; /* Tamanho da logo */
+    height: 50px;
 }
 
-/* Estilos para a navegação */
 nav {
     display: flex;
     flex-direction: column;
-    align-items: flex-end; /* Alinha o texto e o status à direita */
+    align-items: flex-end;
 }
 
 nav ul {
     display: flex;
     list-style: none;
-    gap: 2.5rem; /* Espaçamento entre os itens do menu */
+    gap: 2.5rem;
 }
 
 nav li a {
@@ -54,7 +52,7 @@ nav li a {
     font-size: 1rem;
     font-weight: 500;
     transition: color 0.3s ease, border-bottom 0.3s ease;
-    padding-bottom: 5px; /* Espaço para a borda no hover */
+    padding-bottom: 5px;
 }
 
 nav li a:hover {
@@ -62,7 +60,6 @@ nav li a:hover {
     border-bottom: 2px solid #007bff;
 }
 
-/* Estilos para o status e mensagem */
 nav p {
     font-size: 0.85rem;
     margin-top: 1rem;
@@ -71,16 +68,15 @@ nav p {
     text-align: right;
 }
 
-/* Cores específicas para o status */
 nav p:last-of-type {
     font-weight: 600;
     margin-top: 0.5rem;
 }
 
 nav p:last-of-type.success {
-    color: #28a745; /* Verde para sucesso */
+    color: #28a745; 
 }
 
 nav p:last-of-type.error {
-    color: #dc3545; /* Vermelho para erro */
+    color: #dc3545;
 }
