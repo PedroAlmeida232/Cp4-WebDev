@@ -8,17 +8,17 @@ function Carros() {
     // Função para buscar os dados da API
     const fetchCarros = async () => {
       try {
-        // Faz a requisição para a sua rota de API
+        // Requisição para a rota de API
         const response = await fetch('http://localhost:5001/api/carros');
         const data = await response.json();
-        setCarros(data); // Armazena os carros no estado
+        setCarros(data);
       } catch (error) {
         console.error("Erro ao buscar os carros:", error);
       }
     };
     
     fetchCarros();
-  }, []); // O array vazio garante que a função só rode uma vez
+  }, []);
 
   return (
     <>
