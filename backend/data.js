@@ -36,3 +36,4 @@ const carrosEmDestaque = [
     assentos: "4 lugares",
   },
 ];
+module.exports = carrosEmDestaque;

@@ -1,4 +1,4 @@
-import carrosEmDestaque from './data.js';
+const carrosEmDestaque = require('./data.js');
 
 // Modulos das dependências 
 const express = require("express");
@@ -12,10 +12,10 @@ app.use(express.json());
 app.use(cors());
 
 
+
 //Rotas
 
 app.get("/carros", (req, res) => {
-  res.send("Rota Carros funcionando!")
   res.json(carrosEmDestaque);
 });
 
