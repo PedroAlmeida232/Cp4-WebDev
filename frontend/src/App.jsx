@@ -7,9 +7,9 @@ import Sobre from "./components/Sobre"
 
 function App() {
   const caminhoAtual = window.location.pathname;
-
   const renderizarPagina = () => {
     switch (caminhoAtual) {
+      case "/":
       case "/carros":
         return <Carros />;
       case "/loja":

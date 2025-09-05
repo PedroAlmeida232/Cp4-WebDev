@@ -33,7 +33,9 @@ function Carros() {
           </p>
         </div>
         <div id="botao-banner">
+          <a href="/sobre">
           <button>Saiba mais</button>
+          </a>
         </div>
       </div>
 
