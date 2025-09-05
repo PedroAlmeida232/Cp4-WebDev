@@ -1,0 +1,23 @@
+import './Carros.css'; 
+
+function Carros() {
+  return (
+    <div id="banner-principal">
+      <div id="titulo-banner">
+        <h1>
+          Encontre o Carro dos Seus Sonhos
+        </h1>
+      </div>
+      <div id="subtitulo-banner">
+        <p>
+          Descubra nossa seleção premium de veículos novos e seminovos. Qualidade garantida e os melhores preços do mercado.
+        </p>
+      </div>
+      <div id="botao-banner">
+        <button>Saiba mais</button>
+      </div>
+    </div>
+  );
+}
+
+export default Carros;

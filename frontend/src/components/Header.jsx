@@ -38,9 +38,6 @@ function Header() {
       <nav>
         <ul>
           <li>
-            <a>Início</a>
-          </li>
-          <li>
             <a onClick={() => busca("/carros")}>Carros</a>
           </li>
           <li>
