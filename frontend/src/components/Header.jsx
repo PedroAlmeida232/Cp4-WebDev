@@ -1,40 +1,39 @@
 import { useState } from "react";
-import logo from "../assets/logo.png"; // Importação da imagem
+import logo from "../assets/logo.png";
 import "./Header.css";
-
 
 function Header() {
   const [mensagem, setMensagem] = useState("Nenhuma Mensagem do Servidor");
   const [endpointAtual, setEndPointAtual] = useState("");
-  const [status, setStatus] = useState("");
+  const [status, setStatus] = useState("idle"); // Estado inicial 'idle'
 
   const busca = async (api) => {
     setEndPointAtual(api);
     setMensagem("Carregando...");
-    setStatus("loading...");
+    setStatus("loading"); // Alterado para 'loading'
 
     try {
       const resposta = await fetch(`http://localhost:5001${api}`);
       if (!resposta.ok) {
         console.log(`Erro na requisição ${resposta.status}`);
-        setMensagem(`Erro na requisição: ${resposta.status}`); // Atualização aqui
-        setStatus("Erro"); // Adicionado um status de erro
-        return; // Sai da função para não executar o resto do código
+        setMensagem(`Erro na requisição: ${resposta.status}`);
+        setStatus("error"); // Alterado para 'error'
+        return;
       }
       const data = await resposta.text();
       setMensagem(data);
-      setStatus("Sucesso");
+      setStatus("success"); // Alterado para 'success'
     } catch (error) {
       console.log(`Erro ao buscar dados: ${error}`);
-      setMensagem(`Erro ao conectar ao servidor: ${error.message}`); // Corrigido para .message
-      setStatus("Erro"); // Adicionado um status de erro
+      setMensagem(`Erro ao conectar ao servidor: ${error.message}`);
+      setStatus("error"); // Alterado para 'error'
     }
   };
 
   return (
     <header>
       <div>
-        <img src={logo} alt="logo" /> {/* Uso da variável 'logo' */}
+        <img src={logo} alt="logo" />
       </div>
       <nav>
         <ul>
@@ -53,9 +52,10 @@ function Header() {
           <li>
             <a onClick={() => busca("/contato")}>Contato</a>
           </li>
+          <li>
+            <div className={`status-indicator ${status}`}></div>
+          </li>
         </ul>
-        <p>{mensagem}</p>
-        <p>Status do Servidor: {status}</p>
       </nav>
     </header>
   );

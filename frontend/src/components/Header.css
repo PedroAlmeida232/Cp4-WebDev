@@ -80,3 +80,35 @@ nav p:last-of-type.success {
 nav p:last-of-type.error {
     color: #dc3545;
 }
+
+nav li {
+  display: flex;
+  align-items: center;
+  gap: 8px; 
+}
+
+.status-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.status-indicator.success {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+.status-indicator.error {
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+.status-indicator.loading {
+  background-color: #ffc107;
+  border-color: #ffc107;
+  animation: pulse 1.5s infinite;
+}
