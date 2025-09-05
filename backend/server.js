@@ -1,3 +1,5 @@
+import carrosEmDestaque from './data.js';
+
 // Modulos das dependências 
 const express = require("express");
 const cors = require("cors");
@@ -12,9 +14,7 @@ app.use(cors());
 
 //Rotas 
 app.get("/login", (req, res) => {
-  
-  res.send("bem-vindo usuario")
-
+  res.json(carrosEmDestaque);
 });
 
 app.get("/carros", (req, res) => {
