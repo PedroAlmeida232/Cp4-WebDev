@@ -1,0 +1,11 @@
+.sobre-container .content-box h1 {
+  color: #007bff;
+  margin-bottom: 1rem;
+}
+
+.sobre-container .content-box p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: justify;
+  margin-bottom: 1.5rem;
+}
