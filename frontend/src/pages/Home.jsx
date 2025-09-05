@@ -1,4 +1,3 @@
-import bannerImage from "../assets/banner.png";
 import '../styles/Home.css'; 
 
 function Home() {
