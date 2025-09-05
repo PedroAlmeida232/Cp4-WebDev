@@ -1,40 +1,43 @@
 const carrosEmDestaque = require('./data.js');
 
-// Modulos das dependências 
+// Módulos das dependências
 const express = require("express");
 const cors = require("cors");
-// Instancia do express
+const path = require("path");
+
 const app = express();
-// Porta do servidor
 const port = 5001;
-  app.use(express.json());
-//habilita o cors
+
+// Define a pasta do frontend para servir arquivos estáticos
+const frontendPath = path.join(__dirname, '..', 'frontend');
+
+app.use(express.json());
 app.use(cors());
 
+// Serve os arquivos estáticos do frontend
+app.use(express.static(frontendPath));
 
-
-//Rotas
-
-app.get("/carros", (req, res) => {
+// Rotas da API
+app.get("/api/carros", (req, res) => {
   res.json(carrosEmDestaque);
 });
 
+// A rota principal
+app.get("/", (req, res) => {
+  res.sendFile(path.join(frontendPath, 'index.html'));
+});
+
+// rotas da API
 app.get("/loja", (req, res) => {
-
-  res.send("Rota Lojas funcionando!")
-
+  res.send("Rota Lojas funcionando!");
 });
 
 app.get("/sobre", (req, res) => {
-
-  res.send("Rota Sobre funcionando!")
-
+  res.send("Rota Sobre funcionando!");
 });
 
 app.get("/contato", (req, res) => {
-
-  res.send("Rota Contato funcionando!")
-
+  res.send("Rota Contato funcionando!");
 });
 
 
